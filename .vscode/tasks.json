@@ -1,0 +1,36 @@
+{
+	// defined paths and files for the compiler 
+	
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build active file",
+			"command": "C:\\Program Files\\Msys64\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-std=c++17",
+				"-g",
+				"${file}",
+				"${workspaceFolder}\\src\\glad.c",
+				"${workspaceFolder}\\src\\EBO.cpp",
+				"${workspaceFolder}\\src\\VAO.cpp",
+				"${workspaceFolder}\\src\\VBO.cpp",
+				"${workspaceFolder}\\src\\ShaderClass.cpp",
+				"-I${workspaceFolder}\\include",
+				"-L${workspaceFolder}\\lib",
+				"-l:libglfw3dll.a",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "C:\\Program Files\\Msys64\\mingw64\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: \"C:\\Program Files\\Msys64\\mingw64\\bin\\g++.exe\""
+		}
+	]
+}
